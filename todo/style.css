@@ -1,0 +1,28 @@
+/* Simple styles for the To-Do app */
+:root{
+  --bg:#f6f8fa;
+  --card:#ffffff;
+  --muted:#69707a;
+  --accent:#2563eb;
+  --danger:#e11d48;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); margin:0; padding:24px; color:#0f172a}
+.app{max-width:640px; margin:0 auto; background:transparent}
+h1{text-align:center; margin:0 0 16px}
+.new-task-form{display:flex; gap:8px; margin-bottom:12px}
+.new-task-form input{flex:1; padding:10px 12px; border:1px solid #d1d5db; border-radius:6px}
+.new-task-form button{padding:10px 14px; background:var(--accent); color:white; border:none; border-radius:6px; cursor:pointer}
+.controls{display:flex; justify-content:space-between; align-items:center; margin-bottom:10px}
+.filters{display:flex; gap:6px}
+.filter{background:transparent; border:1px solid transparent; padding:6px 10px; border-radius:6px; cursor:pointer}
+.filter.active{background:#eef2ff; border-color:#c7d2fe}
+.actions button{background:transparent; border:1px solid #e5e7eb; padding:6px 10px; border-radius:6px; cursor:pointer}
+.task-list{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:8px}
+.task{display:flex; align-items:center; gap:8px; background:var(--card); padding:10px; border-radius:8px; border:1px solid #eef2f3}
+.task .title{flex:1}
+.task.completed .title{text-decoration:line-through; color:var(--muted)}
+.task button{background:transparent; border:0; cursor:pointer}
+.task .edit-input{width:100%; padding:6px 8px}
+.footer{margin-top:12px; color:var(--muted); text-align:left}
+@media (max-width:480px){body{padding:14px}}
